@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link herf="{% static 'hello/styles.css'%}" rel="stylesheet">
+    <title>Zirnis News</title>
+</head>
+    <body class="bg-gray-100 flex justify-center">
+        <div class="w-full max-w-6xl bg-white shadow-lg">    
+            <div class="container mx-auto p-6 mt-6 border-b border-gray-300">
+                <h1 class="text-4xl font-extrabold text-gray-800 text-center tracking-tight">
+                    Zirnis News
+                </h1>
+                <p class="text-center text-gray-500 mt-2 text-sm">
+                    Educational Project — Learn to Spot Fake News
+                </p>
+            </div>
+            <div class="p-4"> </div>
+            <hr class="pt-4">
+
+            <!-- Breaking News Banner -->
+            <div class="bg-red-600 text-white py-1 px-2 overflow-hidden relative" style="height: 20px;">
+            <div class="flex items-center h-full">
+                <span class="font-bold uppercase text-xs mr-2 flex items-center">
+                <i data-feather="alert-circle" class="mr-1" style="width:12px;height:12px;"></i> Breaking
+                </span>
+                <div class="flex-1 overflow-hidden">
+                <div class="breaking-news-ticker whitespace-nowrap inline-block text-sm">
+                    <span class="font-semibold mr-4">THIS IS A FAKE NEWS WEBSITE FOR TRAINING PURPOSES</span>
+                    <span class="font-semibold mr-4">LEARN HOW MISINFORMATION CAN LOOK REAL</span>
+                    <span class="font-semibold">EDUCATIONAL CONTENT — NOT ACTUAL NEWS</span>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <style>
+            .breaking-news-ticker {
+                animation: scrollText 20s linear infinite;
+            }
+            @keyframes scrollText {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-100%); }
+            }
+            </style>       
+
+            <div class="p-2"> </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+        <div class="rounded-xl overflow-hidden shadow-lg hover:scale-105 duration-300">
+                <img src="{% static 'hello/images/NRK.jpeg' %}" alt="NRK" class="w-full h-400 object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg hover:scale-105 duration-300">
+                <img src="{% static 'hello/images/VG.jpeg' %}" alt="VG" class="w-full h-400 object-cover">
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg hover:scale-105 duration-300">
+                <img src="{% static 'hello/images/Dagbladet.jpeg' %}" alt="Dagbladet" class="w-full h-400 object-cover">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <div class="rounded-xl overflow-hidden shadow-lg p-4">
+                <h2 class="text-xl font-bold">Advarsel!</h2>
+                <p>Dette er en falsk nettside. Vennligst vær oppmerksom på at informasjonen her ikke er pålitelig.</p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg p-4">
+                <h2 class="text-xl font-bold">Ikke stol på innholdet</h2>
+                <p>Innholdet på denne siden er laget for å lure brukere. Vær forsiktig med hva du deler.</p>
+            </div>
+            <div class="rounded-xl overflow-hidden shadow-lg p-4">
+                <h2 class="text-xl font-bold">Sjekk kildene</h2>
+                <p>Alltid verifiser kildene dine. Denne nettsiden er ikke en pålitelig kilde til informasjon.</p>
+            </div>
+        </div>
+
+        <hr class="p-4">
+
+        <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 mt-6">
+            <div class="h-30 rounded bg-white shadow-md p-4 font-mono text-sm text-gray-700">
+                🔎 Se etter unaturlige detaljer i AI-bilder:<br>
+                Hender, tenner og bakgrunn kan ofte avsløre uekte innhold.
+            </div>
+            
+            <div class="h-30 rounded bg-white shadow-md p-4 font-mono text-sm text-gray-700 lg:col-span-2">
+                📰 Slik spotter du falske nyheter:<br>
+                - Sjekk kilden<br>
+                - Se etter dato og forfatter<br>
+                - Sammenlign med flere nyhetskilder
+            </div>
+
+            <div class="h-30 rounded bg-white shadow-md p-4 font-mono text-sm text-gray-700">
+                📸 AI-genererte bilder har ofte rare lys/skygger.<br>
+                Spør deg selv: «Ser dette realistisk ut?»
+            </div>
+        </div>
+
+        <div class="h-30 w-70 p-4"></div>
+        <hr class="p-4">
+        
+        <div class="grid min-h-[140px] w-70 place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+        <img
+            class="object-cover object-center w-70 rounded-lg h-96"
+            src="https://images.unsplash.com/photo-1682407186023-12c70a4a35e0?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2832&amp;q=80"
+            alt="nature image"
+        />
+        <div class="block mt-2 font-sans text-sm antialiased font-normal leading-normal text-center text-inherit">
+            Image caption
+        </div>
+        </div>
+
+        </div>
+    </body>
+</html>
